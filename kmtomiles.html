@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <style>
+      body {
+         background-image: url("https://images.pexels.com/photos/891252/pexels-photo-891252.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+         background-position: center;
+         background-origin: content-box;
+         background-repeat: no-repeat;
+         background-size: cover;
+         min-height: 100vh;
+         font-family: 'Noto Sans', sans-serif;
+      }
+
+      h2 {
+         color: #eb6565;
+         font-size: 23px;
+         /* margin: -50px 0 80px 0; */
+         display: block;
+         text-align: center;
+      }
+
+      .box {
+         position: absolute;
+         left: 50%;
+         top: 50%;
+         transform: translate(-50%, -50%);
+         background-color: rgba(0, 0, 0, 0.7);
+         border-radius: 3px;
+         padding: 70px 100px;
+         color: #fff;
+      }
+   </style>
+</head>
+
+<body>
+
+   <div class="box">
+      <h2>Miles to Km</h2>
+      <p>Type a value in the Miles field to convert the value to Km:</p>
+
+      <p>
+         <label>Miles</label>
+         <input id="inputFeet" type="number" placeholder="Miles" oninput="Converter(this.value)"
+            onchange="Converter(this.value)">
+      </p>
+      <p>Km: <span id="outputMeters"></span></p>
+   </div>
+
+
+   <script>
+
+      function Converter(valNum) {
+         document.getElementById("outputMeters").innerHTML = valNum * 0.621371 + "  " + "Km";
+      }
+   </script>
+</body>
+
+</html>
